@@ -1,0 +1,35 @@
+service: conversationalAI
+
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: python3.11
+  timeout: 600
+
+plugins:
+  - serverless-offline
+
+package:
+  individually: false
+  exclude:
+    - node_modules/**
+    - .vscode/**
+    - .env
+    - .gitignore
+    - env/**
+
+  include:
+    - src/
+
+functions:
+  retrieve-function:
+    handler: src/lambdas/courses_options/handler.lambda_handler
+    events:
+      - http:
+          path: /retrieve
+          method: post
+
+  embbedings-fucntion:
+    handler: src/lambdas/handler.lambda_handler
+
