@@ -1,4 +1,4 @@
-service: conversationalAI
+service: ragAPI
 
 frameworkVersion: "3"
 
@@ -24,7 +24,7 @@ package:
 
 functions:
   retrieve-function:
-    handler: src/lambdas/courses_options/handler.lambda_handler
+    handler: src/lambdas/backend/handler.lambda_handler
     events:
       - http:
           path: /retrieve
@@ -32,4 +32,22 @@ functions:
 
   embbedings-fucntion:
     handler: src/lambdas/handler.lambda_handler
+    events:
+      - s3:
+          bucket: my-bucket
+          event: s3:ObjectCreated:*
+          rules:
+            - prefix: uploads/
+            - suffix: .txt
 
+resources:
+  Resources:
+    MyBucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: my-bucket
+        NotificationConfiguration:
+          LambdaConfigurations:
+            -
+              Event: s3:ObjectCreated:*
+              Function: arn:aws:lambda:#{AWS::Region}:#{AWS::AccountId}:function:s3-lambda-service-dev-s3Handler
