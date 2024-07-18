@@ -30,8 +30,8 @@ functions:
           path: /retrieve
           method: post
 
-  embbedings-fucntion:
-    handler: src/lambdas/handler.lambda_handler
+  embbedings-function:
+    handler: src/lambdas/embbedings/handler.lambda_handler
     events:
       - s3:
           bucket: my-bucket

@@ -1,8 +1,27 @@
+from typing import Dict, Any
+import boto3
 import json
-from typing import Any, Dict
 
-
+s3 = boto3.client('s3')
 
 def lambda_handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
-    print(event)
-    return event
+    bucket = 'rag-api-aws'
+    key = 'kb/rag-api-aws-kb.txt'
+    
+    try:
+        response = s3.get_object(Bucket=bucket, Key=key)
+        content = response['Body'].read().decode('utf-8')
+        print(content)
+
+        return {
+            'statusCode': 200,
+            'body': json.dumps({
+                "message": content
+            })
+        }
+        
+    except Exception as e:
+        print(e)
+        print(f'Error getting object {key} from bucket {bucket}. '
+              'Make sure they exist and your bucket is in the same region as this function.')
+        raise e

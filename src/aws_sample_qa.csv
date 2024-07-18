@@ -1,500 +1,201 @@
-1. Definição e Importância
-Arquitetura de Software: Representa o blueprint de um sistema, referindo-se aos fundamentos estruturais na composição de blocos de software. É responsável pela organização e comunicação dos elementos essenciais durante a construção de componentes modulares de software.
-Analogias: Comparável a um plano de construção de engenharia civil, onde passos arquiteturais detalhados atuam como alicerces para evitar surpresas em etapas seguintes.
-2. Etapa de Planejamento
-Planejamento Arquitetural: Ocorre após a especificação de requisitos e antes do design. Representa o software em um alto nível de abstração, prevendo operações sem detalhes de implementação.
-Uso de ADLs: Linguagens de Descrição de Arquitetura (e.g., UML, ABACUS, ADML) são comuns para descrever componentes de software.
-3. Riscos e Flexibilidade
-Projeção para Falhas: Softwares devem ser projetados para prever falhas e riscos. Arquitetura de software é o primeiro passo para resolver um problema antes da implementação.
-Custo de Mudanças: Alterações na base arquitetural são custosas e podem comprometer o projeto devido à sua rigidez.
-4. Trade-offs em Arquitetura
-Tomada de Decisões: Trade-offs são inevitáveis e envolvem pesar prós e contras de abordagens competindo entre si. A base de conhecimento sólida e a experiência são cruciais para decisões assertivas.
-5. Disciplina de Arquitetura de Software
-Base de Conhecimento: Sucesso nas decisões varia com a complexidade do projeto. Exige esforço contínuo na absorção de conhecimentos relevantes.
-Papel do Arquiteto: Essencial durante a definição da arquitetura, implicando em estudos de caso, identificação de trade-offs e decisões técnicas. Uma base de conhecimento sólida é necessária para uma especificação adequada.
-6. Importância do Entendimento
-Histórico e Evolução: Compreender a evolução e os antecedentes da arquitetura de software é crucial. Isso facilita previsões sobre tendências futuras e comparações assertivas.
-7. Aprofundamento dos Conceitos
-Conhecimento Superficial: Utilização de padrões prontos sem compreensão pode comprometer o sucesso do projeto. Um arquiteto deve participar ativamente de todas as etapas do ciclo de vida do software.
-8. Estilos Arquiteturais
-Definição: Caracterizam, através de uma visão estética e de alto nível de abstração, como camadas e módulos de software irão comunicar-se.
-Principais Estilos:
-Structure: Layered, pipes and filters, component-based.
-Shared Memory: Role-based, blackboard, database-centric.
-Messaging: Implicit invocation, asynchronous messaging, publish-subscribe.
-Adaptive Systems: Microkernel, reflection, domain-specific language.
-Distributed Systems: Service-oriented, peer to peer, object request broker, cloud computing.
-Deployment: Client-server, n-tier.
-9. Padrões Arquiteturais
-Definição: Soluções gerais e reutilizáveis para problemas recorrentes dentro de um determinado contexto.
-Diferença entre Estilos e Padrões: Estilos são mais abrangentes e focam na visão periférica do problema, enquanto padrões oferecem soluções concretas para problemas específicos.
-10. Exemplos de Estilos e Padrões Arquiteturais
-Estilos Arquiteturais:
-Client-Server
-Component-based
-Layered
-Publish-subscribe
-Plug-ins
-Pipes and Filters
-SOA (Service-Oriented Architecture)
-REST (REpresentational State Transfer)
-Domain Driven Design
-Microservices
-Padrões Arquiteturais:
-Model-View-Controller (MVC)
-Microkernel
-Three-tier
-Event-driven (EDA)
-Message Broker
-CQRS (Command and Query Responsibility Segregation)
-11. Considerações Finais
-Importância do Design Arquitetural: Fundamental para o sucesso do software, facilitando manutenção, compreensão geral e tomada de decisões futuras.
-Papel do Arquiteto de Software: Crucial para guiar o projeto em direção ao sucesso, com base de conhecimento sólida e envolvimento ativo em todas as etapas do ciclo de vida do software.
-
-
-Nuvem
-Contexto e Benefícios dos Padrões de Design na Nuvem:
-
-Os padrões de design na nuvem são soluções testadas e comprovadas para desafios comuns de arquitetura de software.
-Eles oferecem uma base sólida para o desenvolvimento de sistemas escaláveis, eficientes e resilientes.
-Além disso, ajudam a reduzir o tempo de desenvolvimento e os custos operacionais.
-Benefícios Específicos dos Padrões de Design na Nuvem:
-
-Soluções Comprovadas: Esses padrões são baseados em anos de experiência e prática, o que os torna confiáveis para resolver problemas comuns.
-Reutilização: A capacidade de reutilizar esses padrões em diferentes projetos economiza tempo e recursos.
-Codificação Consistente: Os padrões fornecem um formato uniforme para a codificação, melhorando a legibilidade e a manutenção do código.
-Comunicação Eficaz: Ao adotar padrões, a comunicação entre desenvolvedores e arquitetos é aprimorada, resultando em projetos mais bem-sucedidos.
-Categorias de Padrões de Design na Nuvem:
-
-Arquitetura: Esses padrões abordam questões gerais de arquitetura, como escalabilidade, disponibilidade e segurança.
-Desenvolvimento: Focam em problemas específicos de desenvolvimento, como gerenciamento de dados, mensagens e processamento de eventos.
-Implementação: Lidam com questões práticas de implementação, como gerenciamento de recursos, orquestração e monitoramento.
-Aqui estão alguns exemplos de padrões de design na nuvem, agrupados por categorias:
-
-Arquitetura:
-Microsserviços: Este padrão divide um sistema em serviços menores e independentes, facilitando a escalabilidade e a manutenção.
-Event-driven architecture (Arquitetura orientada a eventos): Baseia-se em eventos para comunicar e coordenar componentes, permitindo uma arquitetura flexível e responsiva.
-Desenvolvimento:
-Data caching (Armazenamento em cache de dados): Armazena dados em cache para melhorar o desempenho, reduzindo a necessidade de acessar fontes de dados externas repetidamente.
-Asynchronous messaging (Comunicação assíncrona): Usa mensagens para comunicar componentes de forma assíncrona, permitindo maior flexibilidade e escalabilidade.
-Implementação:
-Load balancing (Balanceamento de carga): Distribui o tráfego entre vários servidores, garantindo uma utilização eficiente dos recursos.
-Autoscaling (Dimensionamento automático): Aumenta ou diminui automaticamente a capacidade de um sistema com base na demanda, otimizando os recursos disponíveis.
-Como Usar Padrões de Design na Nuvem:
-
-Identifique o Problema: Comece identificando o problema específico que você deseja resolver.
-Escolha o Padrão Adequado: Existem muitos padrões disponíveis; selecione aquele que melhor se alinha com o seu problema.
-Adapte o Padrão: Lembre-se de que os padrões são diretrizes gerais. Você pode precisar adaptá-los para atender às suas necessidades específicas.
-
-Desafios de desenvolvimento em nuvem
-Availability	
-Disponibilidade
-A disponibilidade é a proporção de tempo que o sistema está funcionando, geralmente medido como uma porcentagem do tempo de atividade. Ele pode ser afetado por erros de sistema, problemas de infraestrutura, ataques maliciosos e carga do sistema. Os aplicativos de nuvem normalmente fornecem aos usuários um contrato de nível de serviço (SLA) e, portanto, os aplicativos devem ser criados para maximizar a disponibilidade.
-
-Data Management	
-Gerenciamento de dados
-O gerenciamento de dados é o elemento principal de aplicativos em nuvem e influencia a maioria dos atributos de qualidade. Os dados normalmente são hospedados em diferentes locais e em vários servidores por motivos como desempenho, escalabilidade ou a disponibilidade, e isso pode apresentar uma série de desafios. Por exemplo, deve ser mantida a consistência dos dados e dados normalmente precisam ser sincronizados em diferentes locais.
-
-Design and Implementation	
-Design e implementação
-Um bom design abrange fatores como a consistência e a coerência no design do componente e implantação, facilidade de manutenção para simplificar a administração e desenvolvimento e capacidade de reutilização para permitir que componentes e subsistemas possam ser usados em outros aplicativos e em outros cenários. As decisões tomadas durante a fase de design e implementação têm um grande impacto sobre a qualidade e o custo total de propriedade de aplicativos e serviços hospedados pela nuvem.
-
-Messaging	
-Mensagens
-A natureza distribuída dos aplicativos de nuvem exige uma infraestrutura de mensagens que conecta os componentes e serviços, idealmente de uma maneira flexível para maximizar a escalabilidade. O sistema de mensagens assíncronas é amplamente usado e fornece muitos benefícios, mas também traz desafios, como a ordenação de mensagens, o gerenciamento de mensagens suspeitas, a idempotência e muito mais.
-
-Management and Monitoring	
-Gerenciamento e Monitoramento
-Os aplicativos em nuvem são executados em um data center remoto em que você não tem controle total da infraestrutura ou, em alguns casos, do sistema operacional. Isso pode tornar o gerenciamento e o monitoramento mais difíceis do que uma implantação local. Os aplicativos devem expor informações de tempo de execução que operadores e administradores podem usar para gerenciar e monitorar o sistema, bem como suporte para alteração requisitos de negócios e personalização sem a necessidade do aplicativo a ser interrompido ou reimplantado.
-
-Performance and Scalability	
-Desempenho e Escalabilidade
-O desempenho é uma indicação da capacidade de resposta de um sistema para executar qualquer ação dentro de um determinado intervalo, enquanto a escalabilidade é a capacidade de um sistema de lidar com o aumento de carga sem impacto no desempenho, fazendo com que os recursos disponíveis sejam prontamente aumentados. Aplicativos de nuvem normalmente encontram cargas de trabalho variável e picos na atividade. Prever esses picos, especialmente em um cenário de multilocatário, é quase impossível. Em vez disso, os aplicativos devem ser capazes de expansão dentro dos limites para atender aos picos de demanda, e de redução de recursos quando a demanda diminui. Os problemas de escalabilidade de computação atingem não apenas instâncias, mas outros elementos, como o armazenamento de dados, infraestrutura de mensagens e muito mais.
-
-Resiliency	
-Resiliência
-A resiliência é a capacidade de um sistema para tratar normalmente e se recuperar de falhas. A natureza da hospedagem em nuvem, em que os aplicativos costumam ser multilocatário, usam serviços de plataforma compartilhada, competem por recursos e largura de banda, comunicam-se pela Internet e são executados no hardware de mercadoria significa que há uma maior probabilidade de que ocorram falhas tanto transitórias quanto mais permanentes. A detecção de falhas e a recuperação rápida e eficaz são necessárias para manter a resiliência.
-
-Security	
-Segurança
-A segurança é a capacidade de um sistema impedir ações acidentais ou mal-intencionadas fora do uso projetado e evitar a divulgação ou a perda de informações. Os aplicativos de nuvem são expostos na Internet fora dos limites de locais confiáveis e geralmente são abertos ao público e podem atender a usuários não confiáveis. Os aplicativos devem ser criados e implantados de maneira que protejam contra ataques mal-intencionados, restrinjam o acesso a somente usuários aprovados e protejam dados confidenciais.
-
-Catálogo de padrões
-Padrão	Resumo
-Embaixador	Crie serviços auxiliares que enviam solicitações de rede em nome de um consumidor de serviço ou aplicativo.
-Camada anticorrupção	Implemente uma camada de fachada ou adaptador entre um aplicativo moderno e um sistema herdado.
-Back-ends para Front-ends	Crie serviços de back-end separados a serem consumidos por aplicativos de front-end específico ou interfaces.
-Bulkhead	Isole os elementos de um aplicativo em pools para que, se um falhar, os outros continuem a funcionar.
-Cache-Aside	Carregar dados sob demanda em um cache de um armazenamento de dados.
-Coreografia	Permita que cada serviço decida quando e como uma operação comercial será processada, em vez de depender de um orquestrador central.
-Interruptor de Circuito	Trate as falhas que possam consumir uma quantidade variável de tempo para serem corrigidas ao se conectar a um serviço ou recurso remoto.
-Verificação de declaração	Divida uma mensagem grande em uma verificação de declaração e uma carga para evitar sobrecarregar um barramento de mensagem.
-Transação de Compensação	Desfaça o trabalho executado por uma série de etapas, que juntas definem uma operação finalmente consistente.
-Consumidores Concorrentes	Habilite vários consumidores simultâneos processar as mensagens recebidas no mesmo canal de mensagens.
-Consolidação de Recursos de Computação	Consolidar várias tarefas ou operações em uma única unidade de computação
-CQRS	Separar as operações que leem dados de operações que atualizam dados usando interfaces separadas.
-Fornecimento de Evento	Use um repositório somente de acréscimo para registrar a série inteira de eventos que descrevem as ações realizadas nos dados em um domínio.
-Armazenamento de Configuração Externa	Mova as informações de configuração para fora do pacote de implantação de aplicativo para um local centralizado.
-Identidade Federada	Delegar autenticação a um provedor de identidade externa.
-Gatekeeper	Proteger aplicativos e serviços usando uma instância de host dedicado que atua como intermediário entre clientes e o aplicativo ou serviço, valida e corrige solicitações e passa solicitações e dados entre eles.
-Agregação de Gateway	Use um gateway para agregar várias solicitações individuais em uma única solicitação.
-Descarregamento de Gateway	Descarregue a funcionalidade de serviço especializado ou compartilhado para um proxy do gateway.
-Roteamento de Gateway	Faça o roteamento de solicitações para vários serviços usando um único ponto de extremidade.
-Monitoramento do ponto de extremidade de integridade	Implemente verificações funcionais dentro de um aplicativo que ferramentas externas podem acessar por meio de pontos de extremidade expostos em intervalos regulares.
-Tabela de Índice	Crie índices nos campos em armazenamentos de dados que são frequentemente referenciados por consultas.
-Eleição de Líder	Coordene as ações executadas por uma coleção de instâncias de tarefa de colaboração em um aplicativo distribuído ao escolher uma instância como o líder que assume a responsabilidade de gerenciamento de outras instâncias.
-Exibição Materializada	Gere exibições pré-preenchidas nos dados em um ou mais armazenamentos de dados quando os dados não estiverem formatados como o ideal para as operações de consulta necessárias.
-Pipes e Filtros	Dividir uma tarefa que executa processamento complexo em uma série de elementos separados que podem ser reutilizados.
-Fila de Prioridade	Priorize as solicitações enviadas a serviços para que as solicitações com uma prioridade mais alta sejam recebidas e processadas mais rapidamente do que aquelas com uma prioridade mais baixa.
-Publicador/Assinante	Permite a um aplicativo anunciar eventos para vários consumidores de seu interesse assincronamente, sem acoplar os remetentes aos destinatários.
-Nivelamento de Carga Baseado em Fila	Use uma fila que funcione como um buffer entre uma tarefa e um serviço que ela invoca para simplificar cargas pesadas intermitentes.
-Tentar Novamente	Permita que um aplicativo trate falhas previstas e temporárias quando tentar se conectar a um serviço ou recurso de rede ao repetir de forma transparente uma operação que falhou anteriormente.
-Supervisor de Agente do Agendador	Coordene um conjunto de ações em um conjunto distribuído de serviços e outros recursos remotos.
-Fragmentação	Divida um armazenamento de dados em um conjunto de partições horizontais ou fragmentos.
-Sidecar	Implante os componentes de um aplicativo em um processo ou contêiner separado para fornecer isolamento e encapsulamento.
-Hospedagem de Conteúdo Estático	Implante o conteúdo estático para um serviço de armazenamento baseado em nuvem que pode enviá-las diretamente para o cliente.
-Strangler	Migre incrementalmente um sistema herdado substituindo gradualmente partes específicas de funcionalidade por serviços e aplicativos novos.
-Limitação	Controle o consumo de recursos usados por uma instância de um aplicativo, um locatário individual ou todo o serviço.
-Valet Key	Use um token ou chave que fornece aos clientes acesso direto e restrito a um determinado recurso ou serviço.
-
-
-Um bom design abrange fatores como a consistência e a coerência no design do componente e implantação, facilidade de manutenção para simplificar a administração e desenvolvimento e capacidade de reutilização para permitir que componentes e subsistemas possam ser usados em outros aplicativos e em outros cenários. As decisões tomadas durante a fase de design e implementação têm um grande impacto sobre a qualidade e o custo total de propriedade de aplicativos e serviços hospedados pela nuvem.
-
-Padrão	Resumo
-Embaixador	Crie serviços auxiliares que enviam solicitações de rede em nome de um consumidor de serviço ou aplicativo.
-Camada anticorrupção	Implemente uma camada de fachada ou adaptador entre um aplicativo moderno e um sistema herdado.
-Back-ends para Front-ends	Crie serviços de back-end separados a serem consumidos por aplicativos de front-end específico ou interfaces.
-CQRS	Separar as operações que leem dados de operações que atualizam dados usando interfaces separadas.
-Consolidação de Recursos de Computação	Consolidar várias tarefas ou operações em uma única unidade de computação
-Configuração de carga de trabalho de borda	A grande variedade de sistemas e dispositivos na área de produção pode dificultar a configuração da carga de trabalho.
-Repositório de configuração externo	Mova as informações de configuração para fora do pacote de implantação de aplicativo para um local centralizado.
-Agregação de Gateway	Use um gateway para agregar várias solicitações individuais em uma única solicitação.
-Descarregamento de Gateway	Descarregue a funcionalidade de serviço especializado ou compartilhado para um proxy do gateway.
-Roteamento de Gateway	Faça o roteamento de solicitações para vários serviços usando um único ponto de extremidade.
-Eleição de Líder	Coordene as ações executadas por uma coleção de instâncias de tarefa de colaboração em um aplicativo distribuído elegendo uma instância como a líder que assume a responsabilidade por gerenciar as demais instâncias.
-Pipes e Filtros	Dividir uma tarefa que executa processamento complexo em uma série de elementos separados que podem ser reutilizados.
-Sidecar	Implante os componentes de um aplicativo em um processo ou contêiner separado para fornecer isolamento e encapsulamento.
-Hospedagem de Conteúdo Estático	Implante conteúdo estático em um serviço de armazenamento baseado em nuvem que pode enviá-lo diretamente para o cliente.
-Estrangulador Fig	Migre incrementalmente um sistema herdado substituindo gradualmente partes específicas de funcionalidade por serviços e aplicativos novos.
+1. Arquitetura em Camadas (Layered Pattern)
+Descrição:
+A arquitetura em camadas organiza um sistema em diferentes níveis (ou camadas), onde cada camada tem uma responsabilidade específica e comunica-se apenas com as camadas adjacentes.
+
+Caso de Uso: Sistema de E-commerce
+
+Exemplo de uso: Um sistema de e-commerce utiliza a arquitetura em camadas para separar suas funcionalidades principais em diferentes níveis, facilitando a manutenção e escalabilidade.
+Camadas:
+Camada de Apresentação: Interface de usuário (UI) para interação com o cliente, exibição de produtos, carrinho de compras.
+Camada de Lógica de Negócios: Processamento de pedidos, validação de pagamento, gestão de estoque.
+Camada de Acesso a Dados: Interação com o banco de dados para armazenar informações de produtos, pedidos e clientes.
+Benefícios:
+Modularidade: Cada camada pode ser desenvolvida, testada e modificada independentemente.
+Escalabilidade: Facilidade em adicionar novas funcionalidades ou modificar as existentes sem afetar outras partes do sistema.
+
+2. Arquitetura Cliente-Servidor (Client-Server Pattern)
+Descrição:
+Na arquitetura cliente-servidor, o sistema é dividido em duas partes principais: o cliente, que solicita serviços, e o servidor, que fornece serviços em resposta às solicitações do cliente.
+
+Caso de Uso: Aplicativo de E-mail
+
+Exemplo de uso: Um aplicativo de e-mail utiliza a arquitetura cliente-servidor para gerenciar o envio, recebimento e armazenamento de e-mails.
+Componentes:
+Cliente: Interface do usuário para compor, enviar e receber e-mails.
+Servidor de Aplicação: Gerencia a lógica de negócios, como autenticação de usuários, validação de e-mails e filtros.
+Servidor de E-mail: Armazena e gerencia os e-mails recebidos, enviados e rascunhos.
+Benefícios:
+Divisão de Responsabilidades: Cliente focado na interação do usuário, servidor responsável pelo processamento pesado e armazenamento.
+Segurança: Centralização dos dados no servidor facilita o controle de acesso e proteção contra perda de informações.
+
+3. Arquitetura MVC (Model-View-Controller Pattern)
+Descrição:
+O padrão MVC separa um aplicativo em três componentes principais: Modelo (que gerencia os dados), Visão (que apresenta a interface de usuário) e Controlador (que gerencia as interações entre Modelo e Visão).
+
+Caso de Uso: Plataforma de Mídia Social
+
+Caso de uso: Uma plataforma de mídia social adota o padrão MVC para gerenciar interações de usuários, publicação de conteúdo e relacionamentos.
+Componentes:
+Modelo (Model): Gerencia os dados do usuário, publicações, comentários e interações.
+Visão (View): Interface de usuário que exibe o feed de notícias, perfil do usuário e interações.
+Controlador (Controller): Gerencia as requisições dos usuários, processa a lógica de negócios como postagens, comentários e curtidas.
+Benefícios:
+Separação de Responsabilidades: Facilita a manutenção, permitindo a modificação de interfaces ou lógica sem afetar outras partes do sistema.
+Reutilização de Código: Lógica de negócios pode ser reaproveitada em diferentes partes da aplicação.
+
+4. Arquitetura de Microsserviços (Microservices Pattern)
+Descrição:
+A arquitetura de microsserviços divide um sistema em serviços independentes, cada um executando um processo de negócio específico, comunicando-se através de mecanismos leves como APIs.
+
+Caso de Uso: Plataforma de Streaming de Vídeo
+
+Exemplo de uso: Uma plataforma de streaming de vídeo utiliza microsserviços para oferecer escalabilidade, flexibilidade e independência de desenvolvimento.
+Microsserviços:
+Serviço de Autenticação: Gerencia a autenticação e autorização de usuários.
+Serviço de Catalogação: Armazena e gerencia metadados de vídeos, como títulos, descrições e categorias.
+Serviço de Transmissão de Vídeo: Gerencia a transmissão de vídeos para os clientes, garantindo baixa latência e alta qualidade de streaming.
+Benefícios:
+Escalabilidade: Cada microsserviço pode ser escalado independentemente conforme a demanda.
+Facilidade de Manutenção: Alterações ou atualizações em um serviço não afetam os outros, facilitando a evolução contínua da plataforma.
+
+
+Descritivos de Tipos de Arquiteturas de Software
+1. Arquitetura em Camadas (Layered Architecture)
+Descrição:
+Organiza o sistema em camadas hierárquicas, onde cada camada possui uma responsabilidade específica e se comunica apenas com as camadas adjacentes.
+
+Recursos na Cloud:
+
+Compute: Instâncias EC2, Kubernetes para orquestração.
+Armazenamento: Amazon S3, EBS para persistência de dados.
+Escalabilidade: Auto Scaling para ajustar recursos conforme demanda.
+Macetes para Cloud Computing:
+
+Utilize grupos de segurança para controlar o tráfego entre camadas.
+Implemente balanceadores de carga para distribuir solicitações entre as camadas.
+Separe camadas críticas em diferentes zonas de disponibilidade para alta disponibilidade.
+2. Arquitetura Cliente-Servidor (Client-Server Architecture)
+Descrição:
+Divide o sistema em clientes que solicitam serviços e servidores que respondem a essas solicitações, geralmente via protocolos como HTTP ou TCP/IP.
+
+Recursos na Cloud:
+
+Compute: EC2 para instâncias de servidor, Lambda para funções de backend.
+Armazenamento: RDS para banco de dados relacional, DynamoDB para banco de dados NoSQL.
+Escalabilidade: Elastic Load Balancing (ELB) para distribuir tráfego entre servidores.
+Macetes para Cloud Computing:
+
+Utilize serviços gerenciados de banco de dados para facilitar operações de manutenção.
+Implemente CDN (Content Delivery Network) para melhorar a latência globalmente.
+Configure alertas para monitorar a disponibilidade e desempenho dos servidores.
+3. Arquitetura MVC (Model-View-Controller Architecture)
+Descrição:
+Separa o sistema em três componentes principais: Modelo (gerenciamento de dados), Visão (interface de usuário) e Controlador (lógica de aplicação).
+
+Recursos na Cloud:
+
+Compute: Serviços gerenciados como AWS Lambda para funções de controle.
+Armazenamento: Amazon S3 para armazenamento de objetos, RDS ou DynamoDB para dados estruturados.
+Escalabilidade: AWS Auto Scaling para ajustar automaticamente a capacidade de processamento.
+Macetes para Cloud Computing:
+
+Utilize containers (como AWS ECS) para implantar componentes MVC de forma escalável.
+Implemente cache (como Redis) para melhorar o desempenho de leitura de dados.
+Integre serviços de notificação para atualizações em tempo real entre controladores e visões.
+4. Arquitetura de Microsserviços (Microservices Architecture)
+Descrição:
+Divide o sistema em serviços independentes, cada um responsável por uma função de negócio específica, comunicando-se via APIs.
+
+Recursos na Cloud:
+
+Compute: Docker containers no AWS ECS, Azure Kubernetes Service (AKS) para orquestração de microsserviços.
+Armazenamento: Amazon Aurora para bancos de dados relacionais distribuídos, Cosmos DB para bancos de dados NoSQL.
+Escalabilidade: Autoscaling e Kubernetes para dimensionamento horizontal dos serviços.
+Macetes para Cloud Computing:
+
+Implemente circuit breakers para isolamento de falhas entre microsserviços.
+Utilize serviços de descoberta de serviço para gerenciar dinamicamente endpoints de microsserviços.
+Monitorize métricas de desempenho e integridade para cada serviço separadamente.
+Correlação de Recomendações de Uso
+Cenários do Mundo Real e Uso de Arquiteturas de Cloud
+E-commerce usando Arquitetura em Camadas:
+
+Problema: Necessidade de escalabilidade conforme sazonalidade de compras.
+Recomendação: Utilize auto-scaling para aumentar dinamicamente a capacidade de processamento e armazenamento de acordo com a demanda.
+Aplicativo de E-mail usando Arquitetura Cliente-Servidor:
+
+Problema: Requer alta disponibilidade e latência baixa para entrega rápida de e-mails.
+Recomendação: Implemente servidores em diferentes zonas de disponibilidade e use CDN para distribuição global de conteúdo.
+Plataforma de Mídia Social usando Arquitetura MVC:
+
+Problema: Gerenciar grandes volumes de dados de usuário e interações em tempo real.
+Recomendação: Utilize serviços gerenciados de banco de dados para escalabilidade e AWS Lambda para processamento de eventos em tempo real.
+Plataforma de Streaming de Vídeo usando Arquitetura de Microsserviços:
+
+Problema: Lidar com picos de tráfego durante eventos ao vivo e garantir alta qualidade de streaming.
+Recomendação: Use Kubernetes para gerenciar microsserviços de transmissão de vídeo e armazenamento distribuído para garantir escalabilidade e disponibilidade.
+Essas recomendações mostram como escolher arquiteturas de software específicas pode ser crucial para resolver desafios do mundo real, aproveitando os recursos e práticas recomendadas da cloud computing para garantir desempenho, escalabilidade e confiabilidade em suas aplicações.
+
+5. Sistema de Análise de Dados usando Arquitetura em Camadas:
+Problema: Processamento de grandes volumes de dados de forma eficiente.
+Recomendação: Utilize serviços de computação elástica na nuvem (como AWS EMR para processamento de big data) combinados com armazenamento escalável (S3) para gerenciar e analisar grandes conjuntos de dados.
+6. Aplicativo de Delivery de Alimentos usando Arquitetura Cliente-Servidor:
+Problema: Necessidade de atualizações em tempo real sobre o status dos pedidos.
+Recomendação: Implemente um modelo cliente-servidor onde os clientes (usuários do app) interagem com servidores backend escaláveis (EC2 ou AWS Lambda) que se comunicam com bancos de dados gerenciados (RDS) para armazenar e atualizar pedidos em tempo real.
+7. Plataforma de IoT (Internet of Things) usando Arquitetura MVC:
+Problema: Gerenciamento de dispositivos IoT e análise de dados coletados.
+Recomendação: Utilize um modelo MVC onde o controle dos dispositivos (Controlador) é gerenciado por funções serverless (AWS Lambda), os dados coletados são armazenados em bancos de dados NoSQL (DynamoDB) e a interface de usuário (Visão) é suportada por serviços web escaláveis (EC2).
+8. Sistema de Comércio Eletrônico Global usando Arquitetura de Microsserviços:
+Problema: Necessidade de suportar múltiplas regiões geográficas com diferentes requisitos de conformidade e escalabilidade.
+Recomendação: Adote uma arquitetura de microsserviços com contêineres gerenciados (AWS ECS ou Azure AKS), onde cada microsserviço pode ser dimensionado horizontalmente conforme necessário para atender às demandas específicas de cada região. Utilize bancos de dados distribuídos (como Amazon Aurora Global Database) para garantir a consistência dos dados globalmente.
+9. Plataforma de Aprendizado de Máquina usando Arquitetura em Camadas:
+Problema: Treinamento e inferência escaláveis de modelos de machine learning.
+Recomendação: Divida a aplicação em camadas onde o treinamento de modelos (Compute intenso) é realizado em instâncias EC2 com GPUs, armazenamento de dados (modelos treinados) é mantido em S3 e a inferência é executada em servidores de aplicação (EC2) escaláveis com balanceamento de carga para garantir baixa latência.
+10. Aplicativo de Saúde e Bem-Estar usando Arquitetura Cliente-Servidor:
+Problema: Manutenção de registros de pacientes e compartilhamento seguro de informações de saúde.
+Recomendação: Utilize uma arquitetura cliente-servidor com criptografia de ponta a ponta, onde os clientes (usuários) acessam informações via interface web ou móvel (Visão), os servidores backend (EC2) gerenciam o processamento e armazenamento seguro de dados sensíveis (RDS com criptografia) e implemente serviços de segurança e conformidade (como AWS KMS) para proteger dados confidenciais.
+
+
+Cenários de Machine Learning em Alta e Média Escala com Uso de Serverless
+1. Processamento de Grandes Volumes de Dados e Treinamento de Modelos:
+Descrição do Cenário:
+
+Necessidade de processar grandes conjuntos de dados para treinar modelos de machine learning de forma escalável e eficiente.
+Recomendação de Arquitetura:
+
+Cloud Nativa com Serverless:
+Utilize serviços serverless como AWS Lambda ou Azure Functions para processar pré-processamento de dados, validação de dados e até mesmo treinamento de modelos em pequena escala.
+Armazene conjuntos de dados em serviços de armazenamento escalável como Amazon S3 ou Azure Blob Storage.
+Para treinamento em alta escala, considere serviços gerenciados de machine learning como AWS SageMaker ou Azure Machine Learning, que podem escalar automaticamente conforme a demanda.
+2. Implantação e Ingestão Contínua de Modelos:
+Descrição do Cenário:
+
+Necessidade de implantar modelos de machine learning em produção de maneira contínua e gerenciar a ingestão de dados em tempo real.
+Recomendação de Arquitetura:
+
+Microsserviços com Serverless e Containers:
+Implemente microsserviços usando arquitetura de contêineres gerenciados como AWS ECS, Azure Kubernetes Service (AKS) ou Google Kubernetes Engine (GKE).
+Utilize serverless para funções que respondem a eventos específicos, como a ingestão de dados em tempo real para atualizar modelos ou para responder a solicitações de inferência.
+3. Aplicações de Análise Preditiva em Tempo Real:
+Descrição do Cenário:
+
+Necessidade de realizar análises preditivas em tempo real, com baixa latência e capacidade de lidar com picos de demanda.
+Recomendação de Arquitetura:
+
+Serverless com Autoscaling:
+Utilize AWS Lambda, Azure Functions ou Google Cloud Functions para implementar funções serverless que realizam inferência de modelos de machine learning em tempo real.
+Implemente gatilhos baseados em eventos para acionar a execução de funções conforme novos dados chegam.
+Para garantir baixa latência e alta disponibilidade, integre serviços de cache como Amazon ElastiCache ou Azure Cache for Redis para armazenar resultados temporários de modelos.
+Melhores Práticas Arquiteturais
+Escalabilidade Automática: Utilize recursos da cloud que ofereçam escalabilidade automática, como AWS Auto Scaling ou Azure Autoscale, para lidar com variações na carga de trabalho de machine learning.
+
+Gerenciamento de Dados: Implemente pipelines de dados robustos usando ferramentas como AWS Glue, Azure Data Factory ou Google Cloud Dataflow para orquestrar o fluxo de dados entre serviços de armazenamento e computação.
+
+Segurança e Conformidade: Adote práticas de segurança como criptografia de dados em repouso e em trânsito, controle de acesso granular e conformidade com regulamentações relevantes (GDPR, HIPAA, etc.).
+
+Combinação de Arquiteturas de Software ou Código
+Exemplo:
+Combine uma arquitetura de microsserviços para gerenciar a interação entre diferentes componentes de machine learning (treinamento, avaliação, implantação) com funções serverless para execução específica de tarefas.
+Utilize contêineres para implementar modelos complexos que exigem dependências específicas ou que necessitam de maior controle sobre o ambiente de execução.
+Esses cenários e recomendações demonstram como a combinação de serverless com outras arquiteturas pode ser poderosa para lidar com desafios específicos de machine learning em escala, aproveitando os benefícios de escalabilidade, eficiência e custo proporcionados pela cloud computing.
 
-
-Talvez você não conheça exemplos de arquitetura de software, mas, pode ter certeza de que este conceito está mais presente na sua rotina do que imagina.
-
-Todos os dias, você provavelmente utiliza diferentes aplicativos, ferramentas e sistemas online, seja no desktop ou no celular. Isso é básico da rotina da maioria das pessoas.
-
-Contudo, o que muitos desconhecem, é que por trás de um aplicativo, há uma grande estrutura organizacional que é desenvolvida pela arquitetura de software.
-
-Neste conteúdo, explicamos o que é arquitetura de software, como ela funciona e de que forma se aplica no mundo corporativo. Além disso, você também conhecerá os diferentes tipos de arquitetura de software, exemplos e principais modelos. Aproveite a leitura!
-
-O que é arquitetura de software?
-Arquitetura de software é um conceito abstrato, que se refere à organização de um sistema. Ela é responsável por definir os componentes que farão parte de um projeto, suas características, funções e a forma como devem interagir entre si e com outros softwares.
-
-Qual é a função da arquitetura de software?
-Esta área da TI é responsável pela análise estratégica dos componentes operacionais que permitem criar soluções viáveis para uma tecnologia. Para isso, leva em conta aspectos como: 
-
-desempenho;
-escalabilidade;
-interoperabilidade;
-compatibilidade;
-performance.
-Com a arquitetura de software, é possível entender as diferenças entre as linguagens, sistemas operacionais e ambientes da computação. Ou seja, qualquer componente tecnológico pode ser usado para integrar uma solução arquitetural.
-
-Essa parte é essencial, pois otimiza o trabalho dos designers e desenvolvedores, permitindo que uma aplicação esteja dentro dos padrões básicos necessários para funcionar de forma satisfatória.
-
-O professor de arquitetura de software da XP Educação, Rafael Lobato, explica que a área é importante para automatizar novos processos ou melhorar os já existentes.
-
-Assim, os projetos desenvolvidos pelo arquiteto de software diminuem os riscos associados ao sistema. “Em poucas palavras, as tecnologias concretizam um software de modo funcional e adequado para resolver a solução de um negócio”, complementa.
-
-Mary Shaw e David Garlan, pioneiros da área e responsáveis por um dos primeiros livros dedicados à arquitetura de software, ressaltam:
-
-“Além da escolha dos algoritmos e estruturas de dados, a arquitetura envolve: decisões sobre as estruturas que formarão o sistema, controle, protocolos de comunicação, sincronização e acesso a dados, atribuição de funcionalidade a elementos do sistema, distribuição física dos elementos escalabilidade e desempenho e outros atributos de qualidade”.
-
-Qual é a origem da arquitetura de software?
-No fim da década de 1960, cientistas começaram a pesquisar mais sobre o conceito e padrões da arquitetura de software. A ideia era enfatizar a importância de estruturar um sistema antes de seu desenvolvimento. Porém, foi apenas nos anos 1990 que os estudos desta área evoluíram.
-
-Na época, foi escrito o livro Software Architecture: Perspectives on an Emerging Discipline por Shaw e Garlan, trazendo a perspectiva dos padrões, estilos e modelos arquiteturais como base para o desenvolvimento de softwares.
-
-Este salto da história da arquitetura de software foi só o começo. Mais tarde, a área evoluiu drasticamente, após a criação da primeira norma padrão, mais conhecida como ISO/IEEE 1471-2000, que significa uma arquitetura de organização fundamental de um sistema.
-
-Hoje, muitas ações do nosso cotidiano só são possíveis por conta da idealização e do desenvolvimento dessas soluções tecnológicas. Isso tanto no ambiente de trabalho quanto no âmbito pessoal. Alguns dos principais exemplos são o e-mail, a intranet, as lojas online e os serviços na nuvem.
-
-Como funciona a arquitetura de software aplicada aos negócios?
-Para as empresas, a arquitetura de software tem o objetivo de atender a uma visão orientada aos negócios. Tendo isso em mente, o que um arquiteto de software faz é:
-
-desenvolver a estrutura dos sistemas;
-realizar o planejamento estratégico;
-criar os padrões de projetos arquiteturais;
-cuidar da otimização e escalabilidade do negócio;
-construir soluções para aplicações.
-“O arquiteto deve ter sempre o senso crítico de avaliar novas formas de aplicar estas tecnologias ou até de sugerir algo que nunca antes tenha sido utilizado”, diz Lobato. O que, na prática, é a criação ou seleção dos componentes e interações fundamentais para que a tecnologia seja implantada.
-
-Assim, por trás de toda a tecnologia, há uma representação de informação adequada às necessidades dos consumidores ou colaboradores.
-
-5 benefícios da arquitetura de software para o mundo corporativo
-A este ponto, você já deve ter notado que a arquitetura de software é indispensável para qualquer empresa que deseja se manter competitiva em um mercado cada vez mais digital, não é mesmo?
-
-Mas, deve estar se perguntando: “quais são seus benefícios na prática?”
-
-Bom, dentre as principais vantagens que os modelos de arquitetura de software proporcionam para uma empresa, temos:
-
-Redução de riscos para o negócio;
-Alinhamento de expectativas entre os diferentes setores da empresa;
-Construção de aplicações flexíveis e de alta qualidade;
-Possibilidade de integração com diferentes linguagens e sistemas;
-Maior nível de segurança para as aplicações desenvolvidas.
-Além disso, diferentemente de algumas áreas, a arquitetura de software é indispensável nas organizações, principalmente àquelas que têm a tecnologia como premissa no modelo de negócio.
-
-Exemplo disso são marcas como o Nubank, Facebook, Uber, Slack e até os Correios, que criam diversas soluções com base no desenvolvimento ágil, na transformação digital e nas arquiteturas escaláveis .
-
-Normalmente, essas companhias buscam por uma modelagem específica, combinando componentes com base em uma visão arquitetural que mais se adeque ao sistema. Para isso acontecer, os arquitetos de software devem avaliar todas as opções de implementação de um sistema.
-
-Para os profissionais do ramo, essa parte é conhecida como visões da arquitetura, pois permitem uma análise geral do sistema. Então, a partir daí, selecionam as estruturas dos conjuntos que farão parte do processo para o melhor funcionamento da aplicação.
-
-Constam entre os tipos de visão da arquitetura de software:
-
-visão lógica;
-visão de processo;
-visão de implementação;
-visão de caso de uso;
-visão de implantação.
-O que é framework e qual é a sua importância para a arquitetura de software?
-Dentro de um processo das principais arquiteturas de software, o framework é a parte do desenvolvimento que une os componentes dentro da infraestrutura de um sistema ou aplicação, sendo basicamente a sua interface.
-
-O maior diferencial de utilizar um framework é garantir que o desenvolvedor tenha a possibilidade de ajustar o projeto de acordo com a personalização solicitada. Por isso, cada vez mais, os desenvolvedores buscam por esse tipo de ferramenta.
-
-Para eles, ter acesso a parâmetros preestabelecidos aumenta sua produtividade, possibilitando que o trabalho seja feito de forma mais rápida e estruturada. Sem contar que o gerenciamento de ferramentas também fica mais fácil: não é necessário reinventar a roda para colocar um software de pé.
-
-Porém, antes da escolha de qualquer template, o arquiteto de software precisa montar a estrutura necessária para desenvolver sua ideia.
-
-Utilizando a visão da arquitetura, é possível capturar as principais decisões do design estrutural do software, tal qual seus componentes, formulários, restrições e requisitos funcionais ou alternativos.
-
-Por fim, toda essa parte é direcionada para o Documento de Arquitetura de Software, que armazenará as visões, abstrações ou simplificações dos modelos criados e suas características.
-
-Esse documento deve fornecer a visão geral da arquitetura abrangente do sistema. O seu objetivo é funcionar como um meio de comunicação entre o arquiteto e outros participantes do projeto.
-
-Essa etapa é importante para aumentar a qualidade dos modelos arquitetônicos antes de ir para a parte do desenvolvimento.
-
-Como escolher o modelo de arquitetura para um software? 4 exemplos
-Depois de aplicar a visão da arquitetura, podemos avançar mais na rotina do arquiteto de software.
-
-Considerando o melhor caminho para estruturar um sistema, será fundamental pensar na próxima fase do projeto, que é a definição dos padrões de arquitetura de software (lembre-se de que há uma infinidade deles). Como ressalta Rafael Lobato:
-
-“Não existe um funcionamento básico de tecnologia. Há formas infinitas de aplicar e atender aos diversos problemas existentes”.
-
-Mas, atualmente, há alguns padrões que são mais usados para a criação da solução do software, que também são conhecidos como estilos ou tipos de arquitetura de software. Esses são alguns dos principais exemplos.
-
-1. Arquitetura em camadas (Layered pattern)
-A arquitetura de software baseada em camadas organiza um sistema de conjunto que pode ser desconstruído em diferentes serviços, trazendo um modelo incremental de desenvolvimento. Os casos mais comuns para o uso desse padrão são em software de e-commerce e desktop.
-
-2. Arquitetura cliente-servidor (Client-server pattern)
-Estilo organizado em serviços, combinando dados do cliente e do servidor. Para isso, é primordial que o cliente disponibilize uma rede de acesso às informações. 
-
-Este cenário é um dos mais conhecidos na rotina das pessoas, já que costumam ser utilizados em aplicativos bancários e e-mail.
-
-3. Arquitetura MVC (Model-view-controller pattern)
-Distribuído em três camadas (Modelo, Visão e Controle), este padrão é um dos mais comuns para o mundo online, uma vez que traz um modelo interativo de sistema.
-
-4. Arquitetura de microsserviços (Microservices pattern)
-Por fim, este exemplo de arquitetura de software utiliza múltiplos serviços e componentes para desenvolver uma estrutura modular favorecida.
-
-Hoje, é um dos padrões preferidos dos desenvolvedores e arquitetos de software. Isso porque possibilitam a escalabilidade e independência dos módulos, que até podem utilizar diferentes linguagens e programações.
-
-Além de ser um dos modelos favoritos do momento, o padrão de microsserviços também fica entre os destaques nas tendências para a evolução da arquitetura de software.
-
-O que esperar do futuro da arquitetura de software?
-Definitivamente, no futuro do desenvolvimento dos sistemas estarão os modelos de microsserviços, computação em nuvem e inteligência artificial.
-
-“Com os últimos avanços, ficou claro que ainda estamos longe de atingir um limite para o uso da tecnologia. Estamos apenas no início de uma revolução, e com as possibilidades totalmente em aberto”, completa o professor de arquitetura de software, Rafael Lobato.
-
-Essas três tendências têm caminhado bem próximas umas das outras, porque são uma evolução natural da arquitetura de software, e também parte da revolução digital. 
-
-Pensando nisso, separamos as principais razões para ficar de olho em cada uma delas.
-
-Computação em nuvem (cloud computing)
-A computação em nuvem é uma solução tecnológica voltada para o acesso remoto a diferentes conteúdos online. Isso significa que não é mais necessário ter um computador pessoal ou um servidor local para acessar informações.
-
-Em nosso dia a dia, usamos a computação em nuvem para editar documentos no Google Drive ou para escutar uma playlist no Spotify.
-
-Ao utilizar esta tecnologia, certifique-se se o serviço que irá desenvolver necessita de uma nuvem:
-
-pública: o cliente é responsável por subir as informações ao provedor;
-privada: modelo mais apropriado às empresas que oferecem domínio interno aos colaboradores;
-híbrida: combinação entre pública e privada.
-Afinal, cada um desses modelos tem um impacto diferente na organização, inclusive no custo e desempenho do serviço.
-
-Inteligência artificial
-Desenvolver softwares com base em inteligência artificial já é uma prática realizada no mercado de TI.
-
-Atualmente, já se tem uma facilidade de programação, além de uma interface mais intuitiva, que atende mais rapidamente às necessidades dos negócios. Em breve, essa evolução tecnológica deve ficar ainda mais acessível para a produção de softwares e aplicativos.
-
-Microsserviços
-A praticidade dos microsserviços criará um movimento de migração de sistemas para as empresas que têm uma área de TI mais fortalecida e com maior produtividade.
-
-“O futuro da arquitetura, por mais que seja muito difícil prever, tem grandes chances de sempre procurar por novas tecnologias que otimizem o que já existe no mercado”, ressalta Lobato.
-
-Já pensou em se especializar na área de arquitetura de software?
-A área de Tecnologia da Informação está em franca expansão. E não é para menos, afinal, quanto mais a tecnologia avança, maior é a demanda por esse tipo de profissional no mercado.
-
-Agora que você já sabe o que é e viu os principais modelos da arquitetura de software, deve ter percebido que trata-se de um mercado superaquecido.
-
-Afinal, é de extrema importância para o crescimento e desenvolvimento de empresas de todos os segmentos, sobretudo o de tecnologia. E não há dúvidas de que tem muito a crescer ainda.
-
-Que tal dar esse importante passo na sua jornada e se especializar na área?
-
-Conheça a Pós em Arquitetura de Software e Soluções da XP Educação. Certificado pelo MEC, ele é ideal para quem quer dar um upgrade na carreira, a fim de evoluir profissionalmente, tornando-se expert em projetar soluções inovadoras e disruptivas. Acesse o link e saiba mais sobre o curso.
-
-Mas se você quer dar os primeiros passos como desenvolvedor de software, conheça o bootcamp online de Arquitetura de Software que possui apenas 10 semanas de duração. Nele, você verá os pilares e os conceitos fundamentais de programação.
-
-Comece hoje a investir na sua carreira e entre para uma das áreas em maior ascensão no Brasil e no mundo.
-
-E para se desenvolver e crescer ainda mais, conheça o Multi+: uma plataforma de assinatura da XP Educação, com foco no aprendizado contínuo para desenvolver profissionais para a nova economia digital. E o melhor: com 15 dias de teste grátis para você experimentar!
-
-No XPE Multi+ você tem acesso a dezenas de cursos a qualquer momento, com aulas interativas e milhares de conteúdos didáticos. Além disso, você irá aprender com os profissionais mais experientes do mercado. 
-
-
-
-Com a velocidade dos avanços tecnológicos e da transformação digital, os sistemas computacionais modernos se tornam cada vez maiores e mais complexos.
-
-Para conseguir que estes sistemas seja robustos, flexíveis e adaptáveis, é essencial um planejamento adequado dos tipos de arquiteturas de software envolvidos no projeto.
-
-Atualmente, existem diversos princípios e padrões que são utilizados nos sistemas e em geral os projetos não se limitam a um único estilo ou arquitetura. Em vez disso, são uma combinação de padrões que, juntos, formam o sistema completo.
-
-Fatores críticos de desempenho do seu projeto estão totalmente alinhados a escolha dos padrões de acordo com as necessidades particulares do seu software.
-
-Entenda nesse post quais os tipos de arquiteturas de software, e alguns exemplos de aplicações que são bem comuns no nosso dia-a-dia para decidir quais os padrões que atendem melhor as demandas do seu projeto.
-
-O que é Arquitetura de Software?
-Por ser uma área ainda em crescimento e relativamente jovem, não existe na literatura uma definição única para arquitetura de software. A discussão sobre essa definição é bem extensa com vários pontos de vista envolvidos. Particularmente gosto de usar a seguinte definição de arquitetura de software:
-
-“A arquitetura de software define o que é o sistema em termos de componentes computacionais e, os relacionamentos entre estes componentes, os padrões que guiam a sua composição e restrições.
-
- Além da escolha dos algoritmos e estruturas de dados, a arquitetura envolve: decisões sobre as estruturas que formarão o sistema, controle, protocolos de comunicação, sincronização e acesso a dados, atribuição de funcionalidade a elementos do sistema, distribuição física dos elementos, escalabilidade, desempenho, e outros atributos de qualidade.”
-
-Sendo um conceito da Engenharia, podemos visualizar os tipos de arquiteturas de software como recursos que tem como função principal maximizar os ganhos de produtividade no desenvolvimento.
-
-A partir dos objetivos de negócios e das necessidades específicas de entrega de cada sistema, a arquitetura possibilita formas produtivas de desenvolvimento, entrega, escala e operação de software.
-
-Principais etapas do processo de arquitetura de software
-Definição do problema que o software deve resolver: o arquiteto precisa saber qual será o contexto do sistema para saber sua aplicação de uma perspectiva externa. Isso facilita a descrição da proposta de software e a identificação das interfaces.
-Identificação dos componentes: é preciso definir quais componentes farão parte do projeto de arquitetura de software.
-Descrição dos componentes e conectores: deve ser feita em uma configuração de execução.
-Tipos de arquiteturas de software
-O tipo ou padrão de arquitetura define as classes de elementos que podem aparecer em uma arquitetura e as regras que regem a interconexão entre estes elementos. Os padrões representam soluções já estudadas para determinados problemas. 
-
-Principais tipos de arquiteturas de software mais comuns
-– Layers (camadas)
-É um dos tipos mais utilizados onde cada uma das camadas tem funcionalidades específicas no software, o que traz mais flexibilidade para a aplicação.
-
-Oferece maior facilidade de desenvolvimento e execução de testes, mas pode ter a escalabilidade comprometida principalmente a partir do momento em que o projeto começa a acumular uma quantidade elevada de camadas.
-
-– Client-server (cliente-servidor)
-Na arquitetura de software client-server o processamento da informação se divide em módulos e processos distintos, combinando dados do cliente e do servidor. Um dos módulos é responsável pela manutenção da informação e o outro pela obtenção de dados. Este tipo de arquitetura de software é bastante usado em aplicativos com rotinas de usuários como de bancos e e-mail.
-
-– Model-view-controller (MVC)
-O padrão MVC (Modelo, Visão e Controle) separa o projeto do software em três camadas independentes: o modelo (manipulação da lógica de dados), a visão (a interface do usuário) e o controlador (fluxo de aplicação). Esta separação facilita a manutenção do código, que pode ser reutilizado em outros projetos, proporcionando um modelo interativo para o sistema.
-
-– Microservices (micros serviços)
-O padrão se baseia em múltiplos serviços e componentes para desenvolver uma estrutura modular. É o modelo preferido dos desenvolvedores e arquitetos de software, por permitir escalabilidade e independência dos módulos, que podem usar diferentes linguagens. Além de ser um dos modelos favoritos do momento, os micros serviços também fica entre os destaques das tendências para a evolução da arquitetura de software.
-
-– Pipes-and-filters (PF)
-O padrão Pipe-and-filter é baseada em uma arquitetura linear, usa os componentes computacionais como filtros, que recebem uma entrada, transformam-na a partir de um ou mais algoritmos e geram uma saída para um canal de comunicação. Alguns exemplos deste tipo de arquitetura de software são o Sheel do Linux e os reprodutores de vídeo em diferentes formatos.
-
-– Peer-to-Peer (P2P)
-No Peer-to-Peer, todos os pares são clientes e servidores, ou seja, cada computador é um provedor de serviços independente de um servidor central. Se você já baixou algum arquivo via torrent, se deparou com este padrão arquitetural.
-
-– Service-Oriented Architecture (SOA)
-O SOA facilita a operação das grandes empresas, pois auxilia na criação do processo de encontrar, definir e gerenciar os serviços disponibilizados. O NuBank e a Amazon são exemplos de corporações que utilizam este modelo arquitetural.
-
-– Publish-Subscribe (Pub/Sub)
-Principal padrão arquitetural de redes sociais como Instagram e do Spotify, o modelo Publish-Subscribe conecta publicadores (publishers) e assinantes (subscribers). Os publishers enviam mensagens aos subscribers, que são notificados sempre que um novo conteúdo é disponibilizado.
-
-Exemplos de aplicações comuns no dia-a-dia
-As aplicações de arquiteturas estão fortemente presentes na nossa rotina, desde fazer compras online até mesmo nos momentos de descontração e lazer, veja agora exemplos de aplicações de arquitetura de software de sistemas que você provavelmente usou hoje mesmo.
-
-Arquitetura de camadas em sistemas de e-commerce
-Um exemplo bem prático e comum na rotina é o sistema de e-commerce. Onde a comunicação da plataforma é estruturada no software através de camadas.
-
-Desde o clique de compra do cliente na sua loja, até a verificação da disponibilidade dos produtos no banco de dados que é relacionado ao estoque.
-
-Arquitetura micros serviços da Netflix
-Um dos maiores softwares de streaming do mundo utiliza a arquitetura de software de micros serviços que capacita todas as APIs necessárias para aplicativos e aplicativos da web.
-
-Quando a solicitação chega ao ponto final, ela chama os outros micros serviços para obter os dados necessários e esses micros serviços também podem solicitar os dados para micros serviços diferentes. Depois disso, uma resposta completa para a solicitação da API é enviada de volta ao terminal.
-
-Arquitetura orientada por serviços
-É um dos tipos de arquiteturas de software utilizada por grandes instituições bancárias. Atualmente podemos ver o avanço dos bancos digitais, cada vez mais completos em termos de solução, entregando tudo através do digital de forma rápida e ágil.
-
-Esse formato de arquitetura permite a escala no sentido de implementação e a entrega de soluções. Por esse motivo abrir o aplicativo do seu banco te dá a possibilidade de explorar um leque de serviços de A a Z.
-
-O futuro da arquitetura de Software
-No futuro da arquitetura de software estarão os padrões de computação em nuvem e inteligência artificial. Estas tendências têm caminhado bem próximas umas das outras, porque são uma evolução natural das arquiteturas de software, e parte da revolução digital.
-
-A computação em nuvem é uma solução tecnológica com acesso remoto a diferentes conteúdos online. Isso significa que não é necessário mais um computador pessoal ou um servidor local para acessar informações. Em nosso dia a dia já usamos a computação em nuvem para editar documentos no Google Drive ou para escutar uma playlist no Spotify.
-
-Só é preciso se atentar se o serviço que você desenvolverá precisará de uma nuvem pública (o cliente é responsável por subir as informações ao provedor), privada (modelo mais apropriado às empresas que oferecem domínio interno aos colaboradores) ou híbrida (combinação dos serviços citados anteriormente), porque cada uma tem um impacto diferente em uma organização, inclusive no custo e desempenho do serviço.
-
-Qual a relação com o desenvolvimento low-code
-Como já comentamos anteriormente, os tipos de arquiteturas de software tem como principal objetivo maximizar a produtividade no desenvolvimento de softwares que entregam soluções e resolvem os mais diversos problemas.
-
-O que está bastante alinhado ao que o low-code consegue oferecer no que diz respeito a desenvolvimento de sistemas, estabelecendo uma relação bastante favorável para iniciar um projeto partindo dos tipos de arquiteturas de software aliado ao desenvolvimento low-code.
-
-Os avanços tecnológicos e digitais exigem cada vez mais velocidade, flexibilidade, performance e desempenho, por isso o low-code é essencial em uma arquitetura de software.
-
-Concluindo…
-Ao iniciar um novo projeto é sempre difícil definir uma arquitetura. Existem muitos fatores a serem levados em consideração. Não existe uma resposta exata nem definitiva quando estamos definindo uma arquitetura. Todos os projetos são únicos, por tanto a escolha da arquitetura vai depender dos objetivos do sistema e do problema que precisa ser solucionado.
-
-A escolha de uma arquitetura deve ser bem pensada e analisada. Sistemas mal estruturados podem gerar vários problemas de desempenho, escalabilidade e flexibilidade. Por tanto, uma definição adequada da arquitetura no início dos projetos, pode evitar retrabalhos e custos adicionais de tempo e dinheiro.
-
-Se você deseja tirar seus projetos da gaveta sem precisar de uma equipe inteira de desenvolvedores, clique aqui para entrar em contato com a nossa equipe e simplificar sua rotina com low-code usando inteligência para gerar soluções!
-
-
-
-O que é arquitetura de software?
-Esse conjunto de palavras acaba sendo bastante intuitivo, entretanto, é preciso tomar cuidado para não se confundir. Se você fizer uma breve pesquisa sobre o significado da palavra “arquitetura”, irá obter o seguinte resultado:
-
-“Arquitetura é a arte e técnica de organizar espaços e criar ambientes para abrigar os diversos tipos de atividades humanas, visando também a determinada intenção plástica”.
-
-Agora, pensando no desenvolvimento de softwares, podemos definir a arquitetura de software como o responsável por definir a forma como os espaços e toda a estrutura é organizada.
-
-Além disso, podemos dizer que a arquitetura de softwares define a maneira como um software opera, organizando o sistema e questões como o comportamento da estrutura, quais componentes serão responsáveis por executar um conjunto específico de funções e como suas partes serão distribuídas.
-
-A arquitetura de software envolve:
-
-escolha dos algoritmos e estruturas de dados;
-decisões em relação às estruturas que irão compor o sistema;
-controle;
-protocolos de comunicação;
-sincronização de acesso a dados;
-atribuição de funcionalidade a elementos do sistema; entre outros.
-Comparando novamente com a arquitetura tradicional, se você olhar para a planta de um restaurante, é provável que você consiga identificar o tipo de edifício que está sendo construído por conta de suas peculiaridades.
-
-Da mesma forma, quando olhamos para a arquitetura de um aplicativo, por exemplo, precisamos conseguir saber que tipo de app será desenvolvido. Afinal, cada tipo de segmento, empresa ou modelo de negócio, pede por determinados tipos de recursos e funcionalidades.
-
-De onde surgiu a arquitetura de software?
-Em 1960, alguns cientistas já discutiam sobre o conceito de arquitetura de software na intenção de dar ênfase à importância de estruturar um sistema antes de desenvolvê-lo. Entretanto, foi somente em 1990 que os estudos da área evoluíram de forma mais densa. Foi nessa mesma época que o livro “Software Architecture: Perspectives on an Emerging Discipline” surgiu, com a perspectiva dos padrões, modelos e estilos de arquitetura como essência para o desenvolvimento de softwares.
-
-Depois disso, a área evoluiu bastante, já com novas ideias, conhecimentos, tecnologias e soluções. A evolução mais radical ocorreu depois da primeira norma padrão, conhecida como ISO/IEEE 1471-2000, que significa uma arquitetura de organização fundamental de um sistema.
-
-Por que a arquitetura de softwares se tornou tão importante?
-No decorrer do desenvolvimento de um software, tanto o seu tamanho quanto sua complexidade aumentam, excedendo, por exemplo, as estruturas de dados e algoritmos. Por isso, se tornou necessário que os arquitetos de software projetem uma arquitetura que descomplique a compreensão desses componentes.
-
-Esse processo envolve uma série de práticas e protocolos que visam facilitar a organização dos componentes e otimizar a flexibilidade e portabilidade do sistema, aumentando também a facilidade de manutenção.
-
-Vantagens de um software com boa arquitetura
-Veja, por exemplo, os benefícios de um software arquitetado de forma eficiente:
-
-Escalabilidade
-Se a sua empresa está abraçando a transformação digital, certamente está pensando no crescimento do negócio. Nesse sentido, a escalabilidade se torna algo imprescindível. Porém, contar com um software mal-arquitetado pode significar grandes problemas. Dessa forma, a arquitetura de software deve ser pensada para que o sistema seja escalado de forma fácil e rápida, evitando atrasos em cronogramas e bugs.
-
-Performance
-Quando um sistema é mal-estruturado ele também tende a gerar problemas de desempenho. Uma arquitetura bem definida e intuitiva permite uma manutenção menos trabalhosa, eliminando atrasos em processos da empresa. Além disso, contribui para que as demandas sejam executadas de forma prática e ágil, com capacidade de expandir e lidar de forma eficiente com um maior volume de dados.
-
-Flexibilidade
-Outro grande impacto da arquitetura de software é a flexibilidade que ela entrega ao sistema. Esse aspecto é crucial, já que as empresas possuem suas peculiaridades e necessitam de recursos específicos para atenderem seus determinados públicos. Nesse sentido, através da arquitetura, o software pode se adaptar a essas necessidades.
-
-Garantindo uma boa arquitetura para o seu software
-Enfim, um arquiteto de software possui papel fundamental não só no desenvolvimento de um software mas no sucesso do mesmo. Esse especialista precisa constantemente tomar uma série de decisões sobre quais modelos, metodologias e conceitos usar. Além disso, o seu trabalho impacta diretamente na satisfação do usuário, que é quem valida o software.  
-
-Por esses e outros motivos não discorridos neste conteúdo, contar com um especialista com expertise e eficiência fará toda a diferença no seu projeto.
-
-Aqui na iZap, contamos com um time altamente qualificado para desenvolver o seu projeto. Antes mesmo de desenvolver o seu software, temos profissionais completamente aptos e preparados tanto para entregar a melhor arquitetura de sistema quanto para validar a sua solução diante do usuário final.
