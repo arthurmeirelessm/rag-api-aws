@@ -6,8 +6,12 @@ phases:
       python: 3.11
     commands:
       - npm install --silent --no-progress -g serverless
+  pre_build:
+    commands:
+      - echo "Logging into Serverless Framework"
+      - serverless login
   build:
     commands:
       - echo "Starting serverless deployment"
-      - serverless deploy 
+      - serverless deploy --stage $ENVIRONMENT --region $REGION --conceal --verbose
       - echo "Finished deployment"
