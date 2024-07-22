@@ -5,7 +5,8 @@ frameworkVersion: "3"
 provider:
   name: aws
   runtime: python3.11
-  timeout: 600
+  iam:
+    role: arn:aws:iam::552516487395:role/rag-api-role
 
 plugins:
   - serverless-offline
@@ -32,22 +33,4 @@ functions:
 
   embbedings-function:
     handler: src/lambdas/embbedings/handler.lambda_handler
-    events:
-      - s3:
-          bucket: my-bucket
-          event: s3:ObjectCreated:*
-          rules:
-            - prefix: uploads/
-            - suffix: .txt
 
-resources:
-  Resources:
-    MyBucket:
-      Type: AWS::S3::Bucket
-      Properties:
-        BucketName: my-bucket
-        NotificationConfiguration:
-          LambdaConfigurations:
-            -
-              Event: s3:ObjectCreated:*
-              Function: arn:aws:lambda:#{AWS::Region}:#{AWS::AccountId}:function:s3-lambda-service-dev-s3Handler

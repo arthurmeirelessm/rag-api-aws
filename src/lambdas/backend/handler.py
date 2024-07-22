@@ -4,7 +4,7 @@ import json
 
 s3 = boto3.client('s3')
 
-def lambda_handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
+def lambda_handler(event: Dict[str, Any], context: Any) -> str:
     bucket = 'rag-api-aws'
     key = 'kb/rag-api-aws-kb.txt'
     
@@ -15,10 +15,9 @@ def lambda_handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
 
         return {
             'statusCode': 200,
-            'body': json.dumps({
-                "message": content
-            })
-        }
+            'headers': {'Content-Type': 'application/json'},
+            'body': "Ola tudo bem?"
+            }
         
     except Exception as e:
         print(e)
