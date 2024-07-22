@@ -6,10 +6,6 @@ phases:
       python: 3.11
     commands:
       - npm install --silent --no-progress -g serverless
-  pre_build:
-    commands:
-      - echo "Configuring Serverless Framework with license key"
-      - serverless config credentials --provider aws --key $SERVERLESS_ACCESS_KEY
   build:
     commands:
       - echo "Starting serverless deployment"
