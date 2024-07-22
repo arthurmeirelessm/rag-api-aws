@@ -1,0 +1,323 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "The AWS CloudFormation template for this Serverless application",
+  "Resources": {
+    "ServerlessDeploymentBucket": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "BucketEncryption": {
+          "ServerSideEncryptionConfiguration": [
+            {
+              "ServerSideEncryptionByDefault": {
+                "SSEAlgorithm": "AES256"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "ServerlessDeploymentBucketPolicy": {
+      "Type": "AWS::S3::BucketPolicy",
+      "Properties": {
+        "Bucket": {
+          "Ref": "ServerlessDeploymentBucket"
+        },
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "s3:*",
+              "Effect": "Deny",
+              "Principal": "*",
+              "Resource": [
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition"
+                      },
+                      ":s3:::",
+                      {
+                        "Ref": "ServerlessDeploymentBucket"
+                      },
+                      "/*"
+                    ]
+                  ]
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition"
+                      },
+                      ":s3:::",
+                      {
+                        "Ref": "ServerlessDeploymentBucket"
+                      }
+                    ]
+                  ]
+                }
+              ],
+              "Condition": {
+                "Bool": {
+                  "aws:SecureTransport": false
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "RetrieveDashfunctionLogGroup": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": "/aws/lambda/ragAPI-dev-retrieve-function"
+      }
+    },
+    "EmbbedingsDashfunctionLogGroup": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": "/aws/lambda/ragAPI-dev-embbedings-function"
+      }
+    },
+    "RetrieveDashfunctionLambdaFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "ServerlessDeploymentBucket"
+          },
+          "S3Key": "serverless/ragAPI/dev/1721633782207-2024-07-22T07:36:22.207Z/ragAPI.zip"
+        },
+        "Handler": "src/lambdas/backend/handler.lambda_handler",
+        "Runtime": "python3.11",
+        "FunctionName": "ragAPI-dev-retrieve-function",
+        "MemorySize": 1024,
+        "Timeout": 6,
+        "Role": "arn:aws:iam::552516487395:role/rag-api-role"
+      },
+      "DependsOn": [
+        "RetrieveDashfunctionLogGroup"
+      ]
+    },
+    "EmbbedingsDashfunctionLambdaFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "ServerlessDeploymentBucket"
+          },
+          "S3Key": "serverless/ragAPI/dev/1721633782207-2024-07-22T07:36:22.207Z/ragAPI.zip"
+        },
+        "Handler": "src/lambdas/embbedings/handler.lambda_handler",
+        "Runtime": "python3.11",
+        "FunctionName": "ragAPI-dev-embbedings-function",
+        "MemorySize": 1024,
+        "Timeout": 6,
+        "Role": "arn:aws:iam::552516487395:role/rag-api-role"
+      },
+      "DependsOn": [
+        "EmbbedingsDashfunctionLogGroup"
+      ]
+    },
+    "RetrieveDashfunctionLambdaVersiontYarNCwabfKF2uR1RVJfxjseBLJRv3cCcgvkoZaw": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "RetrieveDashfunctionLambdaFunction"
+        },
+        "CodeSha256": "8TaBtPeHVdfosNao/3mhYjU1aSJgvysKS0FgzRfeIqk="
+      }
+    },
+    "EmbbedingsDashfunctionLambdaVersionQqIp7mDaIah1rtLzbdygOHU240Kj3mC7WQ5fSdHA": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "EmbbedingsDashfunctionLambdaFunction"
+        },
+        "CodeSha256": "8TaBtPeHVdfosNao/3mhYjU1aSJgvysKS0FgzRfeIqk="
+      }
+    },
+    "ApiGatewayRestApi": {
+      "Type": "AWS::ApiGateway::RestApi",
+      "Properties": {
+        "Name": "dev-ragAPI",
+        "EndpointConfiguration": {
+          "Types": [
+            "EDGE"
+          ]
+        },
+        "Policy": ""
+      }
+    },
+    "ApiGatewayResourceRetrieve": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "ApiGatewayRestApi",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "retrieve",
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayMethodRetrievePost": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "POST",
+        "RequestParameters": {},
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceRetrieve"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        },
+        "ApiKeyRequired": false,
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "RetrieveDashfunctionLambdaFunction",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        },
+        "MethodResponses": []
+      },
+      "DependsOn": [
+        "RetrieveDashfunctionLambdaPermissionApiGateway"
+      ]
+    },
+    "ApiGatewayDeployment1721633775060": {
+      "Type": "AWS::ApiGateway::Deployment",
+      "Properties": {
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        },
+        "StageName": "dev"
+      },
+      "DependsOn": [
+        "ApiGatewayMethodRetrievePost"
+      ]
+    },
+    "RetrieveDashfunctionLambdaPermissionApiGateway": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "RetrieveDashfunctionLambdaFunction",
+            "Arn"
+          ]
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "ApiGatewayRestApi"
+              },
+              "/*/*"
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "Outputs": {
+    "ServerlessDeploymentBucketName": {
+      "Value": {
+        "Ref": "ServerlessDeploymentBucket"
+      },
+      "Export": {
+        "Name": "sls-ragAPI-dev-ServerlessDeploymentBucketName"
+      }
+    },
+    "RetrieveDashfunctionLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "RetrieveDashfunctionLambdaVersiontYarNCwabfKF2uR1RVJfxjseBLJRv3cCcgvkoZaw"
+      },
+      "Export": {
+        "Name": "sls-ragAPI-dev-RetrieveDashfunctionLambdaFunctionQualifiedArn"
+      }
+    },
+    "EmbbedingsDashfunctionLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "EmbbedingsDashfunctionLambdaVersionQqIp7mDaIah1rtLzbdygOHU240Kj3mC7WQ5fSdHA"
+      },
+      "Export": {
+        "Name": "sls-ragAPI-dev-EmbbedingsDashfunctionLambdaFunctionQualifiedArn"
+      }
+    },
+    "ServiceEndpoint": {
+      "Description": "URL of the service endpoint",
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            "https://",
+            {
+              "Ref": "ApiGatewayRestApi"
+            },
+            ".execute-api.",
+            {
+              "Ref": "AWS::Region"
+            },
+            ".",
+            {
+              "Ref": "AWS::URLSuffix"
+            },
+            "/dev"
+          ]
+        ]
+      },
+      "Export": {
+        "Name": "sls-ragAPI-dev-ServiceEndpoint"
+      }
+    }
+  }
+}

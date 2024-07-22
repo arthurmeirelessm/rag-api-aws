@@ -1,11 +1,12 @@
-service: conversationalAI
+service: ragAPI
 
 frameworkVersion: "3"
 
 provider:
   name: aws
   runtime: python3.11
-  timeout: 600
+  iam:
+    role: arn:aws:iam::552516487395:role/rag-api-role
 
 plugins:
   - serverless-offline
@@ -24,12 +25,12 @@ package:
 
 functions:
   retrieve-function:
-    handler: src/lambdas/courses_options/handler.lambda_handler
+    handler: src/lambdas/backend/handler.lambda_handler
     events:
       - http:
           path: /retrieve
           method: post
 
-  embbedings-fucntion:
-    handler: src/lambdas/handler.lambda_handler
+  embbedings-function:
+    handler: src/lambdas/embbedings/handler.lambda_handler
 
